@@ -5,9 +5,9 @@
 // Paper for the visitor pattern
 package trashvisitor;
 
-import patterns.trash.*;
+import trash.*;
 
-public class Paper extends patterns.trash.Paper
+public class Paper extends trash.Paper
         implements Visitable {
     public Paper(double wt) {
         super(wt);

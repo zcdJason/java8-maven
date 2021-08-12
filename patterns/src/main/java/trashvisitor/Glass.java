@@ -5,9 +5,9 @@
 // Glass for the visitor pattern
 package trashvisitor;
 
-import patterns.trash.*;
+import trash.*;
 
-public class Glass extends patterns.trash.Glass
+public class Glass extends trash.Glass
         implements Visitable {
     public Glass(double wt) {
         super(wt);

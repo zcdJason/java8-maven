@@ -4,9 +4,10 @@
 // Visit http://OnJava8.com for more book information.
 // Can't use package-access member from another package
 
-import hiding.dessert.*;
+import cookie2.Cookie;
 
-public class ChocolateChip extends Cookie {
+public class ChocolateChip extends Cookie
+{
     public ChocolateChip() {
         System.out.println("ChocolateChip constructor");
     }

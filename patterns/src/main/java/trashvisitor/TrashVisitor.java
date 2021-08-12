@@ -5,7 +5,7 @@
 // {java patterns.trashvisitor.TrashVisitor}
 package trashvisitor;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

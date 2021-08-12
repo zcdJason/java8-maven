@@ -3,7 +3,7 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 
-import patterns.shapes.*;
+import shapes.*;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -25,6 +25,7 @@ public class ShapeFactory2 implements FactoryMethod {
         }
     }
 
+    @Override
     public Shape create(String id) {
         try {
             return (Shape) factories

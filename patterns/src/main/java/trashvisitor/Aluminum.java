@@ -5,9 +5,9 @@
 // Aluminum for the visitor pattern
 package trashvisitor;
 
-import patterns.trash.*;
+import trash.*;
 
-public class Aluminum extends patterns.trash.Aluminum
+public class Aluminum extends trash.Aluminum
         implements Visitable {
     public Aluminum(double wt) {
         super(wt);

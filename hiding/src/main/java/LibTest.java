@@ -4,10 +4,12 @@
 // Visit http://OnJava8.com for more book information.
 // Uses the library
 
+import java.util.Vector;
+
 public class LibTest {
     public static void main(String[] args) {
-        Vector v = new Vector();
-        List l = new List();
+//        Vector v = new Vector();
+//        List l = new List();
     }
 }
 /* Output:

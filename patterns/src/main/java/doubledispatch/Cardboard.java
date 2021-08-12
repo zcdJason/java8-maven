@@ -5,11 +5,11 @@
 // Cardboard for double dispatching
 package doubledispatch;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.List;
 
-public class Cardboard extends patterns.trash.Cardboard
+public class Cardboard extends trash.Cardboard
         implements TypedBinMember {
     public Cardboard(double wt) {
         super(wt);

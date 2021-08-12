@@ -5,11 +5,11 @@
 // Glass for double dispatching
 package doubledispatch;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.List;
 
-public class Glass extends patterns.trash.Glass
+public class Glass extends trash.Glass
         implements TypedBinMember {
     public Glass(double wt) {
         super(wt);

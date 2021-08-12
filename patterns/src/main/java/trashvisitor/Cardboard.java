@@ -5,9 +5,9 @@
 // Cardboard for the visitor pattern
 package trashvisitor;
 
-import patterns.trash.*;
+import trash.*;
 
-public class Cardboard extends patterns.trash.Cardboard
+public class Cardboard extends trash.Cardboard
         implements Visitable {
     public Cardboard(double wt) {
         super(wt);

@@ -5,8 +5,6 @@
 
 import java.util.concurrent.CompletableFuture;
 
-import static onjava.CompletableUtilities.*;
-
 public class CompletableOperations {
     static CompletableFuture<Integer> cfi(int i) {
         return
@@ -16,14 +14,14 @@ public class CompletableOperations {
 
     public static void main(String[] args) {
         showr(cfi(1)); // Basic test
-        voidr(cfi(2).runAsync(() ->
+        CompletableUtilities.voidr(cfi(2).runAsync(() ->
                 System.out.println("runAsync")));
-        voidr(cfi(3).thenRunAsync(() ->
+        CompletableUtilities.voidr(cfi(3).thenRunAsync(() ->
                 System.out.println("thenRunAsync")));
-        voidr(CompletableFuture.runAsync(() ->
+        CompletableUtilities.voidr(CompletableFuture.runAsync(() ->
                 System.out.println("runAsync is static")));
         showr(CompletableFuture.supplyAsync(() -> 99));
-        voidr(cfi(4).thenAcceptAsync(i ->
+        CompletableUtilities.voidr(cfi(4).thenAcceptAsync(i ->
                 System.out.println("thenAcceptAsync: " + i)));
         showr(cfi(5).thenApplyAsync(i -> i + 42));
         showr(cfi(6).thenComposeAsync(i -> cfi(i + 99)));
@@ -52,6 +50,10 @@ public class CompletableOperations {
         c.thenApplyAsync(i -> i / 2);
         System.out.println("dependents: " +
                 c.getNumberOfDependents());
+    }
+
+    private static void showr(CompletableFuture<Integer> cfi)
+    {
     }
 }
 /* Output:

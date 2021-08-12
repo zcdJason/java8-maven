@@ -4,7 +4,8 @@
 // Visit http://OnJava8.com for more book information.
 package packageaccess;
 
-class PublicConstructor {
+public class PublicConstructor {
+//class PublicConstructor {
     public PublicConstructor() {
     }
 }

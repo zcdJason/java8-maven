@@ -5,11 +5,11 @@
 // Aluminum for double dispatching
 package doubledispatch;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.List;
 
-public class Aluminum extends patterns.trash.Aluminum
+public class Aluminum extends trash.Aluminum
         implements TypedBinMember {
     public Aluminum(double wt) {
         super(wt);

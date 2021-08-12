@@ -5,7 +5,7 @@
 // A List that can grab the right type
 package doubledispatch;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 import java.util.List;

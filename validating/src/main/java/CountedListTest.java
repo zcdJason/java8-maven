@@ -4,12 +4,17 @@
 // Visit http://OnJava8.com for more book information.
 // Simple use of JUnit to test CountedList.
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CountedListTest {
     private CountedList list;
@@ -28,8 +33,9 @@ public class CountedListTest {
     public void initialize() {
         list = new CountedList();
         System.out.println("Set up for " + list.getId());
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) {
             list.add(Integer.toString(i));
+        }
     }
 
     @AfterEach

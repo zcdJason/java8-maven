@@ -20,5 +20,9 @@
             <groupId>org.openjdk.jmh</groupId>
             <artifactId>jmh-generator-asm</artifactId>
         </dependency>
+        <dependency>
+            <groupId>onjava8</groupId>
+            <artifactId>onjava</artifactId>
+        </dependency>
     </dependencies>
 </project>

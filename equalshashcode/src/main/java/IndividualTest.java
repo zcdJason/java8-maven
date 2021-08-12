@@ -3,7 +3,9 @@
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
 
-import collections.MapOfList;
+
+import pets.Individual;
+import pets.Pet;
 
 import java.util.List;
 import java.util.Set;
@@ -13,9 +15,11 @@ public class IndividualTest {
     public static void main(String[] args) {
         Set<Individual> pets = new TreeSet<>();
         for (List<? extends Pet> lp :
-                MapOfList.petPeople.values())
-            for (Pet p : lp)
+                MapOfList.petPeople.values()) {
+            for (Pet p : lp) {
                 pets.add(p);
+            }
+        }
         pets.forEach(System.out::println);
     }
 }

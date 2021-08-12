@@ -4,14 +4,15 @@
 // Visit http://OnJava8.com for more book information.
 // {WillNotCompile}
 
-class Cat
-        extends ComparablePet implements Comparable<Cat> {
+class Cat implements Comparable<Cat> {
+//class Cat extends ComparablePet implements Comparable<Cat> {
     // error: Comparable cannot be inherited with
     // different arguments: <Cat> and <ComparablePet>
     // class Cat
     // ^
     // 1 error
 
+    @Override
     public int compareTo(Cat arg) {
         return 0;
     }

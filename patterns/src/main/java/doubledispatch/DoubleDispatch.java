@@ -7,7 +7,7 @@
 // {java patterns.doubledispatch.DoubleDispatch}
 package doubledispatch;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;

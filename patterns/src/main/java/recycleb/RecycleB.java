@@ -5,7 +5,7 @@
 // {java patterns.recycleb.RecycleB}
 package recycleb;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 import java.util.List;

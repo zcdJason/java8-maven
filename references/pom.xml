@@ -16,5 +16,10 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>onjava8</groupId>
+            <artifactId>onjava</artifactId>
+        </dependency>
     </dependencies>
 </project>

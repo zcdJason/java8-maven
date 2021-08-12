@@ -5,11 +5,10 @@
 // Paper for double dispatching
 package doubledispatch;
 
-import patterns.trash.*;
 
 import java.util.List;
 
-public class Paper extends patterns.trash.Paper
+public class Paper extends trash.Paper
         implements TypedBinMember {
     public Paper(double wt) {
         super(wt);

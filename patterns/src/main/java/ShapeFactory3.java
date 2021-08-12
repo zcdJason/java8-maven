@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Polymorphic factory methods
 
-import patterns.shapes.*;
+import shapes.*;
 
 import java.util.Random;
 import java.util.function.Supplier;

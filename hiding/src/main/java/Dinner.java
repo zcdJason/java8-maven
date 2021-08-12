@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // Uses the library
 
-import hiding.dessert.*;
+import dessert.Cookie;
 
 public class Dinner {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@
 // {java patterns.recyclec.RecycleC}
 package recyclec;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 

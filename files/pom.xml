@@ -11,5 +11,10 @@
 
     <artifactId>files</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>onjava8</groupId>
+            <artifactId>onjava</artifactId>
+        </dependency>
+    </dependencies>
 </project>

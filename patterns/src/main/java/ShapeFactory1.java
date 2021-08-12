@@ -4,7 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 // A simple static factory method
 
-import patterns.shapes.*;
+import shapes.*;
 
 public class ShapeFactory1 implements FactoryMethod {
     public Shape create(String type) {

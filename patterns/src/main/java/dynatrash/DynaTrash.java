@@ -8,7 +8,7 @@
 // {java patterns.dynatrash.DynaTrash}
 package dynatrash;
 
-import patterns.trash.*;
+import trash.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
