@@ -14,12 +14,10 @@ import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 class Prioritized implements Comparable<Prioritized> {
-    private static AtomicInteger counter =
-            new AtomicInteger();
+    private static final AtomicInteger counter = new AtomicInteger();
     private final int id = counter.getAndIncrement();
     private final int priority;
-    private static List<Prioritized> sequence =
-            new CopyOnWriteArrayList<>();
+    private static final List<Prioritized> sequence = new CopyOnWriteArrayList<>();
 
     Prioritized(int priority) {
         this.priority = priority;
@@ -28,8 +26,7 @@ class Prioritized implements Comparable<Prioritized> {
 
     @Override
     public int compareTo(Prioritized arg) {
-        return priority < arg.priority ? 1 :
-                (priority > arg.priority ? -1 : 0);
+        return priority < arg.priority ? 1 : (priority > arg.priority ? -1 : 0);
     }
 
     @Override
@@ -42,8 +39,9 @@ class Prioritized implements Comparable<Prioritized> {
         int count = 0;
         for (Prioritized pt : sequence) {
             System.out.printf("(%d:%d)", pt.id, pt.priority);
-            if (++count % 5 == 0)
+            if (++count % 5 == 0) {
                 System.out.println();
+            }
         }
     }
 
@@ -55,11 +53,9 @@ class Prioritized implements Comparable<Prioritized> {
 }
 
 class Producer implements Runnable {
-    private static AtomicInteger seed =
-            new AtomicInteger(47);
-    private SplittableRandom rand =
-            new SplittableRandom(seed.getAndAdd(10));
-    private Queue<Prioritized> queue;
+    private static final AtomicInteger seed = new AtomicInteger(47);
+    private final SplittableRandom rand = new SplittableRandom(seed.getAndAdd(10));
+    private final Queue<Prioritized> queue;
 
     Producer(Queue<Prioritized> q) {
         queue = q;
@@ -104,13 +100,12 @@ class Consumer implements Runnable {
 
 public class PriorityBlockingQueueDemo {
     public static void main(String[] args) {
-        PriorityBlockingQueue<Prioritized> queue =
-                new PriorityBlockingQueue<>();
+        PriorityBlockingQueue<Prioritized> queue = new PriorityBlockingQueue<>();
         CompletableFuture.runAsync(new Producer(queue));
         CompletableFuture.runAsync(new Producer(queue));
         CompletableFuture.runAsync(new Producer(queue));
-        CompletableFuture.runAsync(new Consumer(queue))
-                .join();
+
+        CompletableFuture.runAsync(new Consumer(queue)).join();
     }
 }
 /* Output:

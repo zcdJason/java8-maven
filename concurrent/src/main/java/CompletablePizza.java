@@ -10,11 +10,12 @@ import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class CompletablePizza {
+public class CompletablePizza
+{
     static final int QUANTITY = 5;
 
-    public static CompletableFuture<Pizza>
-    makeCF(Pizza za) {
+    public static CompletableFuture<Pizza> makeCF(Pizza za)
+    {
         return CompletableFuture
                 .completedFuture(za)
                 .thenApplyAsync(Pizza::roll)
@@ -26,16 +27,18 @@ public class CompletablePizza {
                 .thenApplyAsync(Pizza::box);
     }
 
-    public static void
-    show(CompletableFuture<Pizza> cf) {
+    public static void show(CompletableFuture<Pizza> cf)
+    {
         try {
             System.out.println(cf.get());
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Timer timer = new Timer();
         List<CompletableFuture<Pizza>> pizzas =
                 IntStream.range(0, QUANTITY)

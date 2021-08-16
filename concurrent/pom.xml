@@ -18,5 +18,11 @@
             <groupId>onjava8</groupId>
             <artifactId>onjava</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-common</artifactId>
+            <version>4.1.43.Final</version>
+        </dependency>
     </dependencies>
 </project>

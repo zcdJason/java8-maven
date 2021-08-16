@@ -7,19 +7,23 @@ import onjava.Nap;
 
 public class Machina {
     public enum State {
+        //
         START, ONE, TWO, THREE, END;
 
         State step() {
-            if (equals(END)) return END;
+            if (equals(END)) {
+                return END;
+            }
             return values()[ordinal() + 1];
         }
     }
 
-    private State state = State.START;
     private final int id;
+    private State state;
 
     public Machina(int id) {
         this.id = id;
+        this.state = State.values()[id];
     }
 
     public static Machina work(Machina m) {
@@ -33,7 +37,7 @@ public class Machina {
 
     @Override
     public String toString() {
-        return "Machina" + id + ": " +
+        return "Machina[" + id + "]: " +
                 (state.equals(State.END) ? "complete" : state);
     }
 }
